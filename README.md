@@ -1,18 +1,21 @@
-# Welcome to your Expo app 👋
+# Quiz👋
+  
+## Dupla Rebeca Lima e Thamye Correa
+- Aplicativo de estudo **Lista** e **detalhes**
+- React Native + Expo
+  
+![ScreeShot](./assets/images/tela01.png)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Passos para executar
 
-## Get started
-
-1. Install dependencies
+1. Instale as dependências
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Inicie o App
 
    ```bash
    npx expo start
    ```
-

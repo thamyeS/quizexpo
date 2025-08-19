@@ -4,7 +4,7 @@
 - Aplicativo de estudo **Lista** e **detalhes**
 - React Native + Expo
   
-![ScreeShot](./assets/images/tela01.png)
+![ScreeShot](./assets/images/Tela01.png)
 
 ## Passos para executar
 

@@ -14,10 +14,10 @@ export const questoes =[
         "id": 2,
         "pergunta":"Qual o resultado 10 + 5 * 3 - 2?",
         "respostas": [
-            "= 20",
-            "= 23",
-            "= 15",
-            "= 25"
+            "20",
+            "23",
+            "15",
+            "15"
         ],
         "certa":2
     },
@@ -47,10 +47,10 @@ export const questoes =[
         "id": 5,
         "pergunta":"Qual o resultado de 100 / 4 + 6 * 2?",
         "respostas": [
-            "= 25",
-            "= 32",
-            "= 28",
-            "= 30"
+            "25",
+            "32",
+            "28",
+            "30"
         ],
         "certa":3
     }

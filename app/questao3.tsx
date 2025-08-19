@@ -1,14 +1,17 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { router } from "expo-router";
+import { useLocalSearchParams, router } from "expo-router";
 import { questoes } from "../assets/mockups/questoes";
 
 export default function questao3() {
+  const { acertos } = useLocalSearchParams<{ acertos: string }>();
+  const pontosAnteriores = parseInt(acertos || "0", 10);
+
   const pergunta = questoes.find(q => q.id === 3); 
 
   function responder(index: number) {
     const acertou = (index + 1) === pergunta?.certa;
-    const pontos = acertou ? 1 : 0;
-    router.push({ pathname: "/questao4", params: { acertos: pontos } });
+    const novosPontos = pontosAnteriores + (acertou ? 1 : 0);
+    router.push({ pathname: "/questao4", params: { acertos: novosPontos } });
   }
 
   return (
@@ -25,13 +28,26 @@ export default function questao3() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", padding: 20 },
-  pergunta: { fontSize: 20, marginBottom: 20, textAlign: "center" },
+  container: { 
+    flex: 1, 
+    justifyContent: "center", 
+    padding: 20, 
+    color: "#e8d8e9ff",
+    backgroundColor: "#e8d8e9ff"
+},
+  pergunta: { 
+    fontSize: 20, 
+    marginBottom: 20, 
+    textAlign: "center" },
   botao: {
     backgroundColor: "#f194ff",
     padding: 15,
     borderRadius: 20,
     marginVertical: 5,
   },
-  textoBotao: { color: "white", fontSize: 16, textAlign: "center" },
+  textoBotao: { 
+    color: "white", 
+    fontSize: 16, 
+    textAlign: "center" 
+},
 });
